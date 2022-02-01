@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nekit\\Desktop\\GB\\C#\\Lection_1\\Examples\\Example001_HelloConsole\\Example001_HelloConsole.csproj": {}
+    "C:\\Users\\nekit\\Desktop\\GB\\C#_Lections\\GB_C-_Lections\\Example001_HelloConsole\\Example001_HelloConsole.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nekit\\Desktop\\GB\\C#\\Lection_1\\Examples\\Example001_HelloConsole\\Example001_HelloConsole.csproj": {
+    "C:\\Users\\nekit\\Desktop\\GB\\C#_Lections\\GB_C-_Lections\\Example001_HelloConsole\\Example001_HelloConsole.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nekit\\Desktop\\GB\\C#\\Lection_1\\Examples\\Example001_HelloConsole\\Example001_HelloConsole.csproj",
+        "projectUniqueName": "C:\\Users\\nekit\\Desktop\\GB\\C#_Lections\\GB_C-_Lections\\Example001_HelloConsole\\Example001_HelloConsole.csproj",
         "projectName": "Example001_HelloConsole",
-        "projectPath": "C:\\Users\\nekit\\Desktop\\GB\\C#\\Lection_1\\Examples\\Example001_HelloConsole\\Example001_HelloConsole.csproj",
+        "projectPath": "C:\\Users\\nekit\\Desktop\\GB\\C#_Lections\\GB_C-_Lections\\Example001_HelloConsole\\Example001_HelloConsole.csproj",
         "packagesPath": "C:\\Users\\nekit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nekit\\Desktop\\GB\\C#\\Lection_1\\Examples\\Example001_HelloConsole\\obj\\",
+        "outputPath": "C:\\Users\\nekit\\Desktop\\GB\\C#_Lections\\GB_C-_Lections\\Example001_HelloConsole\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nekit\\AppData\\Roaming\\NuGet\\NuGet.Config"
