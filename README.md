@@ -4,6 +4,3 @@ This is a study repository.
 
 Mishchenko Nikita
 nekitoso2@yandex.ru
-
-Мищенко Никита
-nekitoso2@yandex.ru
