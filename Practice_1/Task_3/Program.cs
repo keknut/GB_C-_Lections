@@ -23,3 +23,6 @@ if(dayNumber == 6){
 if(dayNumber == 7){
     Console.Write("Sunday");
 }
+if(dayNumber < 0 || dayNumber > 7){
+    Console.WriteLine("Number day of week out of range");
+}
