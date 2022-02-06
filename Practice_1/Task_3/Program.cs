@@ -1,6 +1,6 @@
 ﻿// По заданному номеру дня недели вывести его название
 
-Console.Write("Input day of the week number: ");
+Console.Write("Input day of the week number: "); //выводит на консоль сообщение о вводе дня недели
 int dayNumber = int.Parse(Console.ReadLine());
 if(dayNumber == 1){
     Console.Write("Monday");
