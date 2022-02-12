@@ -12,7 +12,7 @@ bool truthTable(bool x, bool y)
     }
 }
 
-Console.WriteLine("X | Y | F(X, Y)");
+Console.WriteLine("X | Y | F(X,Y)");
 Console.WriteLine("----------------");
 bool x = false;
 bool y = false;
