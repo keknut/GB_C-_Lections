@@ -6,7 +6,7 @@ double distanceBetweenPoints(int Ax, int Ay, int Az, int Bx, int By, int Bz)
     return result;
 }
 
-Console.WriteLine("Space 2D or 3D? Enter 2D or 3D.");
+Console.WriteLine("Space 2D or 3D? Enter 2D or 3D."); //Спрашивает пространство 2D или 3D
 string question = Console.ReadLine();
 int Ax = 0;
 int Ay = 0;
@@ -15,8 +15,9 @@ int Az = 0;
 int Bx = 0;
 int By = 0;
 int Bz = 0;
-if (question == "2D" || question == "2d")
+if (question == "2D" || question == "2d" || question == "2") //Если пространство 2D, вводим две координаты
 {
+    //ввод координат
     Console.Write("Input Ax: ");
     Ax = int.Parse(Console.ReadLine());
     Console.Write("Input Ay: ");
@@ -29,8 +30,9 @@ if (question == "2D" || question == "2d")
 
     Console.WriteLine($"Distance between points: {distanceBetweenPoints(Ax, Ay, Az, Bx, By, Bz)}");
 }
-else if (question == "3D" || question == "3d")
+else if (question == "3D" || question == "3d" || question == "3") // если пространство 3D, то вводим три координаты
 {
+    //ввод координат
     Console.Write("Input Ax: ");
     Ax = int.Parse(Console.ReadLine());
     Console.Write("Input Ay: ");
@@ -48,6 +50,6 @@ else if (question == "3D" || question == "3d")
     Console.WriteLine($"Distance between points: {distanceBetweenPoints(Ax, Ay, Az, Bx, By, Bz)}");
 }
 else
-{
+{ //если пользователь ввёл не 2D и не 3D, то выводим сообщение об ошибке
     Console.WriteLine("You entered a space out of range!");
 }
