@@ -10,6 +10,5 @@ while (index < n){
         Console.WriteLine(index);
         break;
     }
-    
     index++;
 }
