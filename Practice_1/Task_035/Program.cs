@@ -17,7 +17,7 @@ void PrintArray(int[] array) //метод выводит массив в кон�
     Console.WriteLine();
 }
 
-void IsThereNumber(int[] array, int number)
+void IsThereNumber(int[] array, int number) //Выводит сообщение, присутствует ли в массиве то или иное число
 {
     bool flag = false;
     for (int i = 0; i < array.Length; i++)
@@ -25,6 +25,7 @@ void IsThereNumber(int[] array, int number)
         if (array[i] == number)
         {
             flag = true;
+            break;
         }
     }
     if (flag)
