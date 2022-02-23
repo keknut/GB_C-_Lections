@@ -17,4 +17,4 @@ string DecimalToBinary(int number)
 Console.Write("Input decimal number: ");
 int number = int.Parse(Console.ReadLine());
 Console.WriteLine($"Decimal to binary: {DecimalToBinary(number)}");
-//Console.WriteLine(number % 2);
+
