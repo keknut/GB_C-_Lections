@@ -18,21 +18,15 @@ void PrintArray(int[] array) //метод выводит массив в кон�
     Console.WriteLine();
 }
 
-int DiffMaxMin(int[] array)
+int DiffMaxMin(int[] array) //функция возвращает разницу между максимальным и минимальным элементом массива
 {
     int result = 0;
     int max = array[0];
     int min = array[0];
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i] < min)
-        {
-            min = array[i];
-        }
-        if (array[i] > max)
-        {
-            max = array[i];
-        }
+        if (array[i] < min) { min = array[i]; }
+        if (array[i] > max) { max = array[i]; }
     }
     result = max - min;
     return result;
