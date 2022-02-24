@@ -6,5 +6,35 @@
     при k = 2 получаем "(0,0) (4,0) (4,4) (0,4)"
 */
 
+double[] ArrayParseStringToInt(string[] coordinatesString){
+    double[] coordinatesDouble = new double[coordinatesString.Length];
+    for (int i = 0; i < coordinatesString.Length; i++)
+    {
+        coordinatesDouble[i] = double.Parse(coordinatesString[i]);
+    }
+    return coordinatesDouble;
+}
 
-string coordinates = Console.ReadLine();
+void ScalingArray(double[] array, double k){
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = array[i] * k;
+    }
+}
+
+void PrintNewCoordinates(double[] array) //метод выводит массив в консоль
+{
+    for (int i = 0; i < array.Length; i+=2)
+    {
+        Console.Write($"({array[i]},{array[i+1]}) ");
+    }
+    Console.WriteLine();
+}
+
+Console.Write("Input coordinates: ");
+string[] coordinates = Console.ReadLine().Replace("(", "").Replace(",", " ").Replace(")", "").Split(" ");
+double[] coordinatesDouble = ArrayParseStringToInt(coordinates);
+Console.Write("Input scaling factor: ");
+double k  = double.Parse(Console.ReadLine());
+ScalingArray(coordinatesDouble, k);
+PrintNewCoordinates(coordinatesDouble);

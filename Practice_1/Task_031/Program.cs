@@ -11,7 +11,3 @@ void outputArray(int[] array)
 int[] array = { 1, 2, 3, 4, 5, 6, 7, 8 };
 
 outputArray(array);
-/*for (int i = 0; i < array.Length; i++)
-{
-    Console.Write($"{array[i]} ");
-}*/
