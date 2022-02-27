@@ -32,7 +32,10 @@ void PrintNewCoordinates(double[] array) //метод выводит масси�
 }
 
 Console.Write("Input coordinates: ");
-string[] coordinates = Console.ReadLine().Replace("(", "").Replace(",", " ").Replace(")", "").Split(" ");
+string[] coordinates = Console.ReadLine().Replace("(", "")
+                                         .Replace(",", " ")
+                                         .Replace(")", "")
+                                         .Split(" ");
 double[] coordinatesDouble = ArrayParseStringToInt(coordinates);
 Console.Write("Input scaling factor: ");
 double k  = double.Parse(Console.ReadLine());
