@@ -6,7 +6,7 @@ void FillArray(double[,] array) //метод заполняет массив с�
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = new Random().NextDouble(0, 1);
+            array[i, j] = new Random().NextDouble();
         }
     }
 }
