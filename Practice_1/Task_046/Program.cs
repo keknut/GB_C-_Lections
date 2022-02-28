@@ -21,8 +21,8 @@ void ScalingArray(double[] array, double k){
         array[i] = array[i] * k;
     }
 }
-
-void PrintNewCoordinates(double[] array) //метод выводит массив в консоль
+// Метод выводит массив в консоль.
+void PrintNewCoordinates(double[] array) 
 {
     for (int i = 0; i < array.Length; i+=2)
     {
@@ -32,10 +32,10 @@ void PrintNewCoordinates(double[] array) //метод выводит масси�
 }
 
 Console.Write("Input coordinates: ");
-string[] coordinates = Console.ReadLine().Replace("(", "")
-                                         .Replace(",", " ")
-                                         .Replace(")", "")
-                                         .Split(" ");
+string[] coordinates = Console.ReadLine().Replace("(", "") // Ввоодим строку и удаляем "("
+                                         .Replace(",", " ") // Далее удаляем все запятые
+                                         .Replace(")", "") // Удаляем все ")"
+                                         .Split(" "); // Разбиваем строку на массив строк.
 double[] coordinatesDouble = ArrayParseStringToInt(coordinates);
 Console.Write("Input scaling factor: ");
 double k  = double.Parse(Console.ReadLine());
