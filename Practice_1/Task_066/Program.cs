@@ -2,7 +2,7 @@
 
 void PrintNumber(int number)
 {
-    if (number < 0) return;
+    if (number < 1) return;
     PrintNumber(number - 1);
     Console.Write($"{number} ");
 }
