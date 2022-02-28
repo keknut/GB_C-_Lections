@@ -2,9 +2,7 @@
 
 int SumDigits(int number){
     if(number < 1) return 0;
-    int result = 0;
-    result = SumDigits(number / 10) + number % 10;
-    return result;
+    return SumDigits(number / 10) + number % 10;
 }
 
 Console.Write("Input number: ");
