@@ -1,2 +1,1 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Показать двумерный массив размером m×n заполненный вещественными числами
