@@ -30,15 +30,19 @@ void PrintArray(int[,] array) //метод выводит массив в кон
 int SumElementsMainDiagonal(int[,] array)
 {
     int result = 0;
-    for (int i = 0; i < array.GetLength(0); i++)
+    int maxLength = 0;
+    if(array.GetLength(0) > array.GetLength(1)){
+        maxLength = array.GetLength(1);
+    }
+    if(array.GetLength(0) < array.GetLength(1)){
+        maxLength = array.GetLength(0);
+    }
+    if(array.GetLength(0) == array.GetLength(1)){
+        maxLength = array.GetLength(0);
+    }
+    for (int i = 0; i < maxLength; i++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (i == j)
-            {
-                result = result + array[i, j];
-            }
-        }
+        result += array[i, i];
     }
     return result;
 }
