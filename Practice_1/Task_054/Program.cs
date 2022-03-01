@@ -33,11 +33,7 @@ int SumElementsMainDiagonal(int[,] array)
     int maxLength = 0;
     if(array.GetLength(0) > array.GetLength(1)){
         maxLength = array.GetLength(1);
-    }
-    if(array.GetLength(0) < array.GetLength(1)){
-        maxLength = array.GetLength(0);
-    }
-    if(array.GetLength(0) == array.GetLength(1)){
+    }else{
         maxLength = array.GetLength(0);
     }
     for (int i = 0; i < maxLength; i++)
