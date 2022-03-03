@@ -25,8 +25,7 @@ void PrintArray(int[,] array) //метод выводит массив в кон
     }
 }
 
-//метод выводит массив в консоль
-//до k-го элемента по строкам.
+//метод выводит частоту встречаемых элементов в словаре
 void PrintDigitsOccurs(int[,] array,int k)
 {
     for (int i = 0; i < k; i++)
@@ -35,7 +34,6 @@ void PrintDigitsOccurs(int[,] array,int k)
         Console.WriteLine();
     }
 }
-
 
 void DigitOccurs(int[,] array)
 {
