@@ -24,7 +24,7 @@ void PrintArray(int[,] array) //метод выводит массив в кон
     }
 }
 
-void ChangeFirstLineLast(int[,] array){
+void ChangeFirstLineLast(int[,] array){ // Мтод меняет элементы первой строки с элементами последней строки местами.
     int temp = 0;
     for (int i = 0; i < array.GetLength(1); i++)
     {
