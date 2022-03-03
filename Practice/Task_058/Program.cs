@@ -24,7 +24,7 @@ void PrintArray(int[,] array) //метод выводит массив в кон
     }
 }
 
-void TranspositionArray(int[,] array){
+void TranspositionArray(int[,] array){ // Метод транспонирует квадратную матрицу.
     if(array.GetLength(0) != array.GetLength(1)){
         Console.WriteLine("Transposition is not possible! The matrix is not square. ");
         return;
