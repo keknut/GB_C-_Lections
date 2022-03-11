@@ -23,7 +23,16 @@ void PrintArray(int[,] array) //метод выводит массив в кон
     }
 }
 
+double ArithmeticMeanColumn(int[,] array, int column)
+{
+    double result = 0;
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        result += array[i, column];
+    }
 
+    return result / array.GetLength(0);
+}
 
 Console.WriteLine("Enter the dimension of the array.");
 Console.Write("Input m: ");
@@ -34,3 +43,8 @@ int[,] array = new int[m, n];
 FillArray(array);
 Console.WriteLine();
 PrintArray(array);
+
+for (int i = 0; i < array.GetLength(1); i++)
+{
+    Console.WriteLine($"Arithmetic mean of a column {i}: {ArithmeticMeanColumn(array, i)}");
+}
