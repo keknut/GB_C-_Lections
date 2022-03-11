@@ -1,4 +1,4 @@
-﻿// В матрице чисел найти сумму элементов главной диагонали
+﻿// Дан целочисленный массив. Найти среднее арифметическое каждого из столбцов.
 
 void FillArray(int[,] array) //метод заполняет массив случайными вещественными числами [0; 1]
 {
@@ -17,30 +17,19 @@ void PrintArray(int[,] array) //метод выводит массив в кон
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            if(i == j){
-                Console.ForegroundColor = ConsoleColor.Green; // Подкрашиваем главную диагональ для удобства, изменяя цвет текста.
-            }
             Console.Write($"{array[i, j]} ");
-            Console.ResetColor(); // Сбрасываем цвет текста в консоли
         }
         Console.WriteLine();
     }
 }
 
-int SumElementsMainDiagonal(int[,] array)
-{
+int SumColumn(int[,] array, int numberColumn){
     int result = 0;
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (i == j)
-            {
-                result = result + array[i, j];
-            }
-        }
+        result += array[i, numberColumn];
     }
-    return result;
+    return result / array.GetLength(0);
 }
 
 Console.WriteLine("Enter the dimension of the array.");
@@ -52,4 +41,8 @@ int[,] array = new int[m, n];
 FillArray(array);
 Console.WriteLine();
 PrintArray(array);
-Console.WriteLine($"The sum of the elements of the main diagonal: {SumElementsMainDiagonal(array)}");
+Console.WriteLine();
+for (int i = 0; i < array.GetLength(1); i++)
+{
+    Console.WriteLine($"Arithmetic mean of a column  [{i}]: {SumColumn(array, i)}");
+}
