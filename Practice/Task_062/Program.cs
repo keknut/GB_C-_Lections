@@ -24,42 +24,20 @@ void PrintArray(int[,] array) //метод выводит массив в кон
     }
 }
 
-int CoordinatesMinElement(int[,] array){
-    int min = 0;
-    int minI = 0;
-    int minJ = 0;
+void DeleteLineColumn(int[,] array, int deleteLine, int deleteColumn)
+{
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            if(array[i, j] < min){
-                min = array[i, j];
-                minI = i;
-                minJ = j;
+            if (i == deleteLine || j == deleteColumn)
+            {
+                array[i, j] = 0;
             }
         }
-        return minI, minJ;
     }
 }
 
-/* void DeleteLineColumn(int[,] array, int deleteLine, int deleteColumn){
-    int primaryDeleteColumn = deleteColumn;
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        deleteColumn = primaryDeleteColumn;
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if(j == deleteColumn && j != (array.GetLength(1) - 1)){
-                array[i,j] = array[i, j+1];
-                deleteColumn++;
-            }
-            if(i == deleteLine){
-                array[i, j] = array[i + 1, j];
-            }
-        }
-    }
-}
- */
 Console.WriteLine("Enter the dimension of the array.");
 Console.Write("Input m: ");
 int m = int.Parse(Console.ReadLine());
@@ -72,5 +50,23 @@ Console.WriteLine();
 PrintArray(array);
 Console.WriteLine();
 
-Console.WriteLine(CoordinatesMinElement(array));
-//DeleteLineColumn(array, CoordinatesMinElement(array));
+int min = array[0, 0];
+int minI = 0;
+int minJ = 0;
+for (int i = 0; i < array.GetLength(0); i++)
+{
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+        if (array[i, j] < min)
+        {
+            min = array[i, j];
+            minI = i;
+            minJ = j;
+        }
+    }
+}
+
+Console.WriteLine($"i: {minI} j: {minJ}");
+Console.WriteLine();
+DeleteLineColumn(array, minI, minJ);
+PrintArray(array);
