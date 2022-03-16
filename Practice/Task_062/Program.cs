@@ -24,16 +24,24 @@ void PrintArray(int[,] array) //метод выводит массив в кон
     }
 }
 
-void DeleteLineColumn(int[,] array, int deleteLine, int deleteColumn)
+void DeleteLineColumn(int[,] array, int[,] newArray, int deleteLine, int deleteColumn)
 {
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
+    for (int i = 0; i < newArray.GetLength(0); i++)
+    { 
+        for (int j = 0; j < newArray.GetLength(1); j++)
         {
-            if (i == deleteLine || j == deleteColumn)
+            newArray[i ,j] = array[i, j] ;
+            if (i == deleteLine)
             {
-                array[i, j] = 0;
+                newArray[i, j] = array[i + 1, j];
+                deleteLine++;
             }
+            /* if(j == deleteColumn)
+            {
+                newArray[i, j] = array[i, j + 1];
+                deleteColumn++;
+            } */
+
         }
     }
 }
@@ -65,6 +73,8 @@ for (int i = 0; i < array.GetLength(0); i++)
         }
     }
 }
-
-DeleteLineColumn(array, minI, minJ);
-PrintArray(array);
+Console.WriteLine($"i: {minI} j: {minJ}");
+Console.WriteLine();
+int [,] newArray = new int[array.GetLength(0) - 1, array.GetLength(1) - 1];
+DeleteLineColumn(array, newArray, minI, minJ);
+PrintArray(newArray);
