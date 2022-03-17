@@ -34,14 +34,24 @@ void DeleteLineColumn(int[,] array, int[,] newArray, int deleteLine, int deleteC
             if (i == deleteLine)
             {
                 newArray[i, j] = array[i + 1, j];
-                deleteLine++;
             }
-            /* if(j == deleteColumn)
+        }
+        if(i == deleteLine){
+            deleteLine++;
+        }
+    }
+    for (int i = 0; i < newArray.GetLength(0); i++)
+    { 
+        for (int j = 0; j < newArray.GetLength(1); j++)
+        {
+            newArray[j ,i] = array[j, i] ;
+                if(i == deleteColumn)
             {
-                newArray[i, j] = array[i, j + 1];
-                deleteColumn++;
-            } */
-
+                newArray[j, i] = array[j, i + 1];
+            }
+        }
+        if(i == deleteColumn){
+            deleteColumn++;
         }
     }
 }
