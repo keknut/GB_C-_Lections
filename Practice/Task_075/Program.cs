@@ -33,7 +33,6 @@ for (int i = 0; i < info.GetLength(0); i++)
         result[i] += data[j + count] * DegreeOfNumber(2, info[i] - 1 - j);
     }
     count += info[i];
-    //Console.WriteLine(result[i]);
 }
 for (int i = 0; i < result.GetLength(0); i++)
 {
