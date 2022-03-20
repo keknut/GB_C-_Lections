@@ -22,6 +22,35 @@
 Задача: найти M при заданном N и получить одно
 из разбиений на группы N ≤ 10²⁰*/
 
+// Метод возводит число в степень
+int NumberDegree(int number, int degree)
+{
+    int result = number;
+    if (degree == 0)
+        return 1;
+    for (int i = 0; i < degree - 1; i++)
+    {
+        result = result * number;
+    }
+    return result;
+}
+
 Console.Write("Input N: ");
 int numberN = int.Parse(Console.ReadLine());
-int[] array = new int[numberN];
+int countGroups = 1;
+int j = 1;
+bool flag = true;
+
+while (flag)
+{
+    Console.Write($"Group {countGroups}: ");
+    while (j <= NumberDegree(2, countGroups) - 1)
+    {
+        Console.Write($"{j} ");
+        j++;
+        if(j > numberN) break;
+    }
+    Console.WriteLine();
+    if(j > numberN) flag = false;
+    countGroups++;
+}
